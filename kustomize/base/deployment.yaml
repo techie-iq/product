@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+  labels:
+    app: product
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: product
+      labels:
+        app: product
+    spec:
+      containers:
+        - name: product
+          image: techieiq/product
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: product

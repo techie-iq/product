@@ -26,11 +26,6 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew clean build
-      - name: print repository version
-        id: repo-version
-        run: |
-          output=$(./gradlew printVersion -Dexpression=project.version -q -DforceStdout)
-          echo ::set-output name=docker_tag::$output
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:

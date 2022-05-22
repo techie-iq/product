@@ -1,5 +1,7 @@
 package com.wowfy.grocery
 
+import com.wowfy.grocery.adapter.out.persistence.Hello
+import io.micronaut.runtime.ApplicationConfiguration
 import io.micronaut.runtime.Micronaut.*
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.info.*
